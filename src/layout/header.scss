@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+
+.header {
+    background-color: $color-surface;
+    border-bottom: 1px solid rgba(56, 69, 106, 0.18);
+    box-shadow: 0 2px 10px rgba(56, 69, 106, 0.05);
+}
+
+.header-container {
+    width: min(100% - 2rem, $container-width);
+    min-height: 6rem;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+
+    color: $color-text;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 0.5rem 0;
+    color: $color-text;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color $transition;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: $color-primary-dark;
+}

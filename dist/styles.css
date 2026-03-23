@@ -250,9 +250,11 @@ img {
   color: #2f3a59;
 }
 
-.hero-banner {
-  padding: 3rem 0 3rem;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+.hero-banner .hero-banner {
+  padding: 5rem 0 2.5rem;
+  background: linear-gradient(rgba(243, 248, 253, 0.88), rgba(238, 244, 251, 0.92)), url("images/clouds.png");
+  background-size: cover;
+  background-position: center;
 }
 .hero-banner-container {
   width: min(100% - 2rem, 1200px);

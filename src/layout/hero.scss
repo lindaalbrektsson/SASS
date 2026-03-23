@@ -5,9 +5,7 @@
 }
 
 .hero-container {
-    width: min(100% - 2rem, $container-width);
-    margin-inline: auto;
-
+@include container;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;

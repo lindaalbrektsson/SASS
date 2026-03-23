@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .hero-banner {
-    padding: 5.5rem 0 3rem;
+    padding: 3rem 0 3rem;
     background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
 
     &-container {

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass src:dist --no-source-map --style=expanded",
-    "watch": "sass src:dist --watch --style=expanded"
+    "build": "sass src/styles.scss dist/styles.css --no-source-map --style=expanded",
+    "watch": "sass src/styles.scss dist/styles.css --watch --style=expanded"
   },
   "keywords": [],
   "author": "",

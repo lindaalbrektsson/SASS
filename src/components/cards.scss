@@ -1,12 +1,8 @@
 @use "../abstracts/variables" as *;
-
-.features {
-    padding: 5rem 0;
-}
+@use "../abstracts/mixins" as *;
 
 .features-container {
-    width: min(100% - 2rem, $container-width);
-    margin-inline: auto;
+    @include container;
 }
 
 .section-heading {

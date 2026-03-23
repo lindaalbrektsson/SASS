@@ -1,11 +1,13 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .hero {
     padding: 5rem 0 4rem;
 }
 
 .hero-container {
-@include container;
+    @include container;
+
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
@@ -117,9 +119,7 @@
 }
 
 .hero-menu-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     width: 1.8rem;
     font-size: 1.2rem;
     line-height: 1;

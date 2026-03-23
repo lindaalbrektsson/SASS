@@ -15,10 +15,6 @@ img {
   max-width: 100%;
 }
 
-.features {
-  padding: 5rem 0;
-}
-
 .features-container {
   width: min(100% - 2rem, 1200px);
   margin-inline: auto;
@@ -116,11 +112,11 @@ img {
 
 .header-container {
   width: min(100% - 2rem, 1200px);
-  min-height: 6rem;
   margin-inline: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  min-height: 6rem;
   gap: 2rem;
 }
 
@@ -281,10 +277,12 @@ img {
 }
 
 .hero-menu-icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 1.8rem;
   font-size: 1.2rem;
   line-height: 1;
 }
+
+/*# sourceMappingURL=styles.css.map */

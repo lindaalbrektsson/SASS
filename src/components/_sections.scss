@@ -6,6 +6,7 @@
 
     &--alt {
         padding-top: 0.5rem;
+        padding-bottom: 1rem;
     }
 
     &-container {
@@ -13,45 +14,47 @@
     }
 }
 
-.section-heading {
-    max-width: 62rem;
+.section {
+    &-heading {
+        max-width: 62rem;
 
-    h2 {
-        margin-bottom: 1rem;
-        color: $color-text;
-        font-size: clamp(2rem, 3vw, 2.8rem);
-        line-height: 1.1;
+        h2 {
+            margin-bottom: 1rem;
+            color: $color-text;
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            line-height: 1.1;
+        }
     }
-}
 
-.section-label {
-    margin-bottom: 0.75rem;
-    color: $color-accent;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
+    &-label {
+        margin-bottom: 0.75rem;
+        color: $color-accent;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
 
-.section-text {
-    max-width: 72rem;
-    color: $color-text-soft;
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
+    &-text {
+        max-width: 72rem;
+        color: $color-text-soft;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
 
-.section-cta {
-    margin-top: 1.75rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
+    &-cta {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
 
-.section-panel {
-    margin-top: 2rem;
-    max-width: 72rem;
-    padding: 1.5rem 1.5rem 1.5rem 1.75rem;
-    border-left: 3px solid rgba(100, 150, 220, 0.6);
+    &-panel {
+        margin-top: 2rem;
+        max-width: 72rem;
+        padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+        border-left: 3px solid rgba(100, 150, 220, 0.6);
+    }
 }
 
 .ads-strip {
@@ -59,7 +62,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
     max-width: 1000px;
-    margin: 1rem auto 0;
+    margin: 0.25rem auto 0;
 }
 
 .ad-banner {
@@ -95,8 +98,95 @@
     }
 }
 
+.ads-group {
+    max-width: 1000px;
+    margin: 1.25rem auto 0;
+}
+
+.ads-label {
+    position: relative;
+    margin: 0 0 0.9rem;
+    color: $color-accent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 4.5rem;
+        height: 2px;
+        margin: 0.45rem auto 0;
+        background-color: rgba(100, 150, 220, 0.7);
+    }
+}
+
+.ads-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+@media (max-width: 700px) {
+    .ads-group {
+        margin-top: 1.75rem;
+    }
+
+    .ads-label {
+        font-size: 0.72rem;
+
+        &::after {
+            width: 3.5rem;
+        }
+    }
+}
+
 @media (max-width: 900px) {
     .ads-strip {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .section {
+        &-heading {
+            h2 {
+                font-size: 2rem;
+                line-height: 1.08;
+            }
+        }
+
+        &-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+        }
+
+        &-text {
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        &-panel {
+            margin-top: 1.5rem;
+            padding: 1.1rem 1rem 1.1rem 1.1rem;
+        }
+
+        &-cta {
+            margin-top: 1.25rem;
+        }
+    }
+
+    .ad-banner {
+        padding: 0.9rem 1rem;
+
+        h3 {
+            font-size: 0.95rem;
+        }
+
+        p {
+            font-size: 0.82rem;
+        }
     }
 }

@@ -27,12 +27,7 @@
     }
 
     &-label {
-        margin-bottom: 0.75rem;
-        color: $color-accent;
-        font-size: 0.9rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        @include section-label;
     }
 
     &-text {
@@ -104,13 +99,9 @@
 }
 
 .ads-label {
-    position: relative;
-    margin: 0 0 0.9rem;
-    color: $color-accent;
+@include section-label;
+    margin-bottom: 0.9rem;
     font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     text-align: center;
 
     &::after {

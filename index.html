@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="dist/styles.css" />
 </head>
 
+<audio id="win95-audio" src="sounds/win95-startup.mp3" preload="auto"></audio>
+
+<script>
+    const playButton = document.getElementById("play-sound-button");
+    const audio = document.getElementById("win95-audio");
+
+    if (playButton && audio) {
+        playButton.addEventListener("click", () => {
+            audio.currentTime = 0;
+            audio.play().catch((error) => {
+                console.error("Could not play audio:", error);
+            });
+        });
+    }
+</script>
+
 <body>
     <header class="header">
         <div class="header-container">
@@ -31,10 +47,14 @@
             <div class="hero-banner-container">
                 <div class="hero-banner-content">
                     <p class="hero-banner-label">Retro redesign concept</p>
+                    <p class="hero-banner-note">
+  Inspired by the original Windows95.com Design Challenge.
+</p>
                     <h1>Welcome to Windows 95</h1>
                     <p class="hero-banner-text">
                         A modern reinterpretation of the original Windows95.com with a cleaner
                         layout, clearer hierarchy and a nostalgic interface style.
+
                     </p>
                 </div>
 
@@ -44,16 +64,17 @@
             </div>
         </section>
 
-        <section class="content-section">
-            <div class="content-section-container">
-                <div class="section-panel">
+    <section class="content-section">
+        <div class="content-section-container">
+            <div class="section-panel">
                 <div class="section-heading">
                     <p class="section-label">Original content</p>
                     <h2>Classic promotion, redesigned</h2>
                     <p class="section-text">
                         The original homepage used banners and links to promote advertising and
                         featured content. In this redesign, that idea is preserved in a cleaner,
-                        more structured format.
+                        more structured format, with small nods to the original design challenge
+                        and nostalgic Windows 95 experience.
                     </p>
 
                     <div class="section-cta">
@@ -61,11 +82,16 @@
                             <span class="retro-button-icon">📦</span>
                             <span>Shareware</span>
                         </a>
-                    </div>
+
+                        <button type="button" class="retro-button" id="play-sound-button">
+                            <span class="retro-button-icon">🔊</span>
+                            <span>Play startup sound</span>
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <section class="retro-window-section" id="resources">
             <div class="retro-window-container">

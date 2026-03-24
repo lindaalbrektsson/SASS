@@ -31,3 +31,12 @@
     border-right: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
 }
+
+@mixin section-label {
+    margin-bottom: 0.75rem;
+    color: $color-accent;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}

@@ -54,21 +54,16 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     width: 1.2rem;
     height: 1.2rem;
-
     background-color: #d4d0c8;
-
     border-top: 1px solid #ffffff;
     border-left: 1px solid #ffffff;
     border-right: 1px solid #7c7c7c;
     border-bottom: 1px solid #7c7c7c;
-
     font-size: 0.95rem;
     font-weight: 400;
     color: #000;
-
     line-height: 1;
 }
 
@@ -81,7 +76,6 @@
 
 .retro-window-item {
     @include win95-button;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +140,6 @@
 
 .retro-button {
     @include win95-button;
-
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -186,12 +179,12 @@
     .retro-window-item {
         min-height: 8rem;
     }
-}
 
     .retro-button--cta {
-    padding: 0.3rem 0.55rem;
-    font-size: 0.85rem;
-    gap: 0.35rem;
+        padding: 0.3rem 0.55rem;
+        font-size: 0.85rem;
+        gap: 0.35rem;
+    }
 }
 
 @media (max-width: 480px) {

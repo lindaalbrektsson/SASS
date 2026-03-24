@@ -2,11 +2,14 @@
 @use "../abstracts/mixins" as *;
 
 .retro-window-section {
-    padding: 0 0 2rem;
+    margin-top: 0rem;
+    margin-bottom: 1.5rem;
 }
 
 .retro-window-container {
     @include container;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .retro-window {
@@ -98,10 +101,11 @@
 }
 
 .retro-toolbar {
-    display: flex;
+    @include flex-center;
+
     flex-wrap: wrap;
     gap: 0.35rem;
-    margin-top: 0.65rem;
+    margin-top: 1.5rem;
 }
 
 .retro-toolbar-item {

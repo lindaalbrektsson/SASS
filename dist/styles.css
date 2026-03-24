@@ -1,27 +1,33 @@
+html,
 body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #F3F8FD;
   color: #38456A;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
+main {
+  flex: 1;
 }
 
 .retro-window-section {
-  padding: 0 0 2rem;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
 }
 
 .retro-window-container {
   width: min(100% - 2rem, 1200px);
   margin-inline: auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .retro-window {
@@ -115,9 +121,11 @@ img {
 
 .retro-toolbar {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-top: 0.65rem;
+  margin-top: 1.5rem;
 }
 
 .retro-toolbar-item {
@@ -158,6 +166,91 @@ img {
   }
   .retro-window-item {
     min-height: 8rem;
+  }
+}
+.content-section {
+  padding: 0 0 2.5rem;
+}
+.content-section--alt {
+  padding-top: 0.5rem;
+}
+.content-section-container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+.section-heading {
+  max-width: 62rem;
+}
+.section-heading h2 {
+  margin-bottom: 1rem;
+  color: #38456A;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.section-label {
+  margin-bottom: 0.75rem;
+  color: #8CBEEC;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-text {
+  max-width: 72rem;
+  color: #5f6f92;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.section-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ads-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+
+.ad-banner {
+  padding: 1rem 1.1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(56, 69, 106, 0.08);
+  overflow: hidden;
+}
+.ad-banner h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+.ad-banner p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.96;
+}
+.ad-banner--primary {
+  background: linear-gradient(135deg, #7a00b4, #d100a8);
+}
+.ad-banner--secondary {
+  background: linear-gradient(135deg, #f24e1e, #ff7a00);
+}
+.ad-banner--tertiary {
+  background: linear-gradient(135deg, #0f3d91, #3e7bd6);
+}
+
+@media (max-width: 900px) {
+  .ads-strip {
+    grid-template-columns: 1fr;
   }
 }
 .site-footer {
@@ -250,11 +343,19 @@ img {
   color: #2f3a59;
 }
 
-.hero-banner .hero-banner {
-  padding: 5rem 0 2.5rem;
-  background: linear-gradient(rgba(243, 248, 253, 0.88), rgba(238, 244, 251, 0.92)), url("images/clouds.png");
+.hero-banner {
+  position: relative;
+  padding: 1.5rem 0 2.5rem;
+  background: linear-gradient(90deg, rgba(243, 248, 253, 0.88) 0%, rgba(243, 248, 253, 0.82) 45%, rgba(243, 248, 253, 0.35) 70%, rgba(243, 248, 253, 0.08) 100%), url("../images/clouds.png");
   background-size: cover;
   background-position: center;
+}
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.25), transparent 60%);
+  pointer-events: none;
 }
 .hero-banner-container {
   width: min(100% - 2rem, 1200px);
@@ -263,6 +364,8 @@ img {
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 .hero-banner-content {
   max-width: 42rem;
@@ -299,33 +402,6 @@ img {
   object-fit: contain;
   image-rendering: pixelated;
   filter: drop-shadow(0 10px 24px rgba(56, 69, 106, 0.15));
-}
-
-@media (max-width: 900px) {
-  .hero-banner {
-    padding: 4.5rem 0 2.5rem;
-  }
-  .hero-banner-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .hero-banner-visual {
-    justify-content: flex-start;
-  }
-  .hero-banner-icon {
-    width: 10rem;
-  }
-}
-@media (max-width: 600px) {
-  .hero-banner h1 {
-    font-size: 2.6rem;
-  }
-  .hero-banner-text {
-    font-size: 1rem;
-  }
-  .hero-banner-icon {
-    width: 8rem;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

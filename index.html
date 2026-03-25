@@ -20,6 +20,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,16 +49,23 @@
                 <div class="section-panel">
                     <div class="section-heading">
                         <p class="section-label">Inspired by the original</p>
-                        <h2>Classic content, redesigned</h2>
+                        <h2>Where nostalgia meets usability</h2>
                         <p class="section-text">
-                            The original homepage used banners and links to promote featured content. In this redesign, that idea is preserved in a
-                            cleaner, more structured format, with subtle nods to the original design and Windows 95 experience.
+                            The original homepage used banners and links to promote featured content. In this redesign,
+                            that idea is preserved in a cleaner, more structured format, with subtle nods to the
+                            original design and Windows 95 experience.
                         </p>
 
                         <div class="section-cta">
                             <button type="button" class="retro-button" id="play-sound-button">
                                 <span class="retro-button-icon">🔊</span>
                                 <span>Play startup sound</span>
+                            </button>
+
+                            <button type="button" class="retro-button retro-button--secondary" id="theme-toggle"
+                                aria-label="Toggle dark mode">
+                                <span class="retro-button-icon">🌙</span>
+                                <span>Dark mode</span>
                             </button>
                         </div>
                     </div>
@@ -138,7 +146,8 @@
                         <p class="section-label">Inspired by the original</p>
                         <h2>A cleaner way to present classic content</h2>
                         <p class="section-text">
-                            This design reorganizes the most recognizable parts of the original homepage into a more focused experience.
+                            This redesign restructures the most recognizable elements of the original homepage into a
+                            more user-friendly experience.
                         </p>
                     </div>
 
@@ -166,6 +175,33 @@
                 </div>
             </div>
         </section>
+
+        <section class="content-section content-section--contact" id="contact">
+            <div class="content-section-container">
+                <div class="section-panel contact-panel">
+                    <div class="contact-group">
+                        <p class="section-label">Get in touch</p>
+                        <h2>Contact us</h2>
+
+                        <p class="section-text">
+                            This redesign keeps the spirit of the original site, including a simple way to get in
+                            touch.
+                        </p>
+
+                        <p class="section-text">
+                            For questions, feedback, or general inquiries, feel free to email us.
+                        </p>
+
+                        <div class="section-cta">
+                            <a href="mailto:info@windows95redesign.com" class="retro-button">
+                            <span class="retro-button-icon">📬</span>
+                                <span>Email us</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -175,10 +211,10 @@
                 <p>Inspired by the original Windows95.com</p>
             </div>
 
-            <div class="footer-tech">
-                <p>Built with HTML & SCSS</p>
-                <p>Responsive redesign project</p>
-            </div>
+        <div class="footer-tech">
+            <p>Modern take on a web classic</p>
+            <p>Designed for clarity and nostalgia</p>
+        </div>
         </div>
     </footer>
 
@@ -187,6 +223,7 @@
     <script>
         const playButton = document.getElementById("play-sound-button");
         const audio = document.getElementById("win95-audio");
+        const themeToggle = document.getElementById("theme-toggle");
 
         if (playButton && audio) {
             playButton.addEventListener("click", () => {
@@ -194,6 +231,18 @@
                 audio.play().catch((error) => {
                     console.error("Could not play audio:", error);
                 });
+            });
+        }
+
+        if (themeToggle) {
+            themeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-theme");
+
+                const isDark = document.body.classList.contains("dark-theme");
+
+                themeToggle.innerHTML = isDark
+                    ? `<span class="retro-button-icon">☀️</span><span>Light mode</span>`
+                    : `<span class="retro-button-icon">🌙</span><span>Dark mode</span>`;
             });
         }
     </script>

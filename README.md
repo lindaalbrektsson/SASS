@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Syfte
 
 Målet med detta projekt var att modernisera en omodern hemsida med fokus på UI/UX, samtidigt som kärninnehållet från originalet (Windows95.com) behålls.
@@ -30,3 +31,6 @@ Målet har varit att visa hur samma typ av webbplats kan upplevas mer tydlig, mo
 
 ## Original
 ![Original Windows95](images/windows-95-1996.png)
+=======
+
+>>>>>>> linda

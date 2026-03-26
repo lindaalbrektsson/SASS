@@ -1,13 +1,13 @@
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
-@use "base/base" as *;
+@use "base/base";
 
-@use "components/retro-window" as *;
-@use "components/sections" as *;
+@use "components/retro-window";
+@use "components/sections";
 
-@use "layout/footer" as *;
-@use "layout/header" as *;
-@use "layout/hero" as *;
+@use "layout/footer";
+@use "layout/header";
+@use "layout/hero";
 
 @use "themes/dark-mode";

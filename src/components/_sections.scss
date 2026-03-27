@@ -1,8 +1,8 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-@function space($n) {
-    @return $n * 0.5rem;
+@function space($step) {
+    @return $step * 0.5rem;
 }
 
 .content-section {
@@ -132,12 +132,7 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #ffea00;
-        text-shadow:
-            1px 0 #000,
-            -1px 0 #000,
-            0 1px #000,
-            0 -1px #000,
-            2px 2px 0 rgba(0, 0, 0, 0.25);
+        text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000, 2px 2px 0 rgba(0, 0, 0, 0.25);
     }
 
     &--webtrends {
@@ -237,18 +232,6 @@
 }
 
 @media (max-width: 700px) {
-    .ads-group {
-        margin-top: 1.75rem;
-    }
-
-    .ads-label {
-        font-size: 0.72rem;
-
-        &::after {
-            width: 3.5rem;
-        }
-    }
-
     .section {
         &-heading {
             h2 {
@@ -273,18 +256,15 @@
         }
     }
 
-    .contact-panel {
-        margin-top: 1rem;
-        padding: 0;
+    .ads-group {
+        margin-top: 1.75rem;
     }
 
-    .contact-group {
-        .section-label {
-            font-size: 0.72rem;
+    .ads-label {
+        font-size: 0.72rem;
 
-            &::after {
-                width: 3.5rem;
-            }
+        &::after {
+            width: 3.5rem;
         }
     }
 
@@ -297,6 +277,21 @@
 
         p {
             font-size: 0.82rem;
+        }
+    }
+
+    .contact-panel {
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .contact-group {
+        .section-label {
+            font-size: 0.72rem;
+
+            &::after {
+                width: 3.5rem;
+            }
         }
     }
 }

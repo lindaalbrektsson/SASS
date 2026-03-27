@@ -48,23 +48,23 @@
 .retro-window-controls {
     display: flex;
     gap: 0.15rem;
-}
 
-.retro-window-controls span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: #d4d0c8;
-    border-top: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
-    border-right: 1px solid #7c7c7c;
-    border-bottom: 1px solid #7c7c7c;
-    font-size: 0.95rem;
-    font-weight: 400;
-    color: #000;
-    line-height: 1;
+    span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: #d4d0c8;
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #7c7c7c;
+        border-bottom: 1px solid #7c7c7c;
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: #000;
+        line-height: 1;
+    }
 }
 
 .retro-window-body {

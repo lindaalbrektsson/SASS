@@ -1,43 +1,43 @@
 body.dark-theme {
     background-color: #111418;
     color: #f5f7fa;
-}
 
-body.dark-theme .header,
-body.dark-theme .content-section,
-body.dark-theme .content-section--alt,
-body.dark-theme .retro-window-section,
-body.dark-theme .site-footer {
-    background-color: #111418;
-    color: #f5f7fa;
-}
+    .header,
+    .content-section,
+    .content-section--alt,
+    .retro-window-section,
+    .site-footer {
+        background-color: #111418;
+        color: #f5f7fa;
+    }
 
-body.dark-theme .hero-banner h1,
-body.dark-theme .hero-banner-text {
-    color: #1f2d3d;
-}
+    .hero-banner h1,
+    .hero-banner-text {
+        color: #1f2d3d;
+    }
 
-body.dark-theme .section-heading h2,
-body.dark-theme .section-text,
-body.dark-theme .footer-copy p,
-body.dark-theme .footer-tech p,
-body.dark-theme .contact-group h2,
-body.dark-theme .contact-group .section-text {
-    color: #f5f7fa;
-}
+    .section-heading h2,
+    .section-text,
+    .footer-copy p,
+    .footer-tech p,
+    .contact-group h2,
+    .contact-group .section-text {
+        color: #f5f7fa;
+    }
 
-body.dark-theme .hero-banner-label,
-body.dark-theme .section-label,
-body.dark-theme .ads-label,
-body.dark-theme .contact-group .section-label {
-    color: #8fb7ff;
-}
+    .hero-banner-label,
+    .section-label,
+    .ads-label,
+    .contact-group .section-label {
+        color: #8fb7ff;
+    }
 
-body.dark-theme .section-panel {
-    border-left-color: rgba(143, 183, 255, 0.75);
-}
+    .section-panel {
+        border-left-color: rgba(143, 183, 255, 0.75);
+    }
 
-body.dark-theme .main-nav a,
-body.dark-theme .logo-text {
-    color: #f5f7fa;
+    .main-nav a,
+    .logo-text {
+        color: #f5f7fa;
+    }
 }
